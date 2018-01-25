@@ -23,7 +23,7 @@ public class GithubCalls {
     }
 
     // 2 - Public method to start fetching users following by Jake Wharton
-    public static void fetchUserFollowing(Callbacks callbacks, String username, String apikey){
+    public static void fetchUserFollowing(Callbacks callbacks, String title){
 
         // 2.1 - Create a weak reference to callback (avoid memory leaks)
         final WeakReference<Callbacks> callbacksWeakReference = new WeakReference<Callbacks>(callbacks);
@@ -32,7 +32,7 @@ public class GithubCalls {
         GithubService gitHubService = GithubService.retrofit.create(GithubService.class);
 
         // 2.3 - Create the call on Github API
-        Call<List<GithubUser>> call = gitHubService.getFollowing(username, apikey );
+        Call<List<GithubUser>> call = gitHubService.getFollowing(title);
         // 2.4 - Start the call
         call.enqueue(new Callback<List<GithubUser>>() {
 

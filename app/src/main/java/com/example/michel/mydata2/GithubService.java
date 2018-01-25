@@ -14,8 +14,8 @@ import retrofit2.http.Query;
  */
 
 public interface GithubService {
-    @GET("svc/{username}/v2/home.json?api-key={apikey}")
-    Call<List<GithubUser>> getFollowing(@Path("username") String username, @Query("apikey")String apikey);
+    @GET("svc/topstories/v2/home.json?api-key=c69e095eadba4c708c5d4ffeb0699a41")
+    Call<List<GithubUser>> getFollowing(@Query("article")String title);
 
 
     public static final Retrofit retrofit = new Retrofit.Builder()

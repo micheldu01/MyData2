@@ -47,7 +47,7 @@ public class Main2Activity extends AppCompatActivity implements NetworkAsyncTask
     // 4 - Execute HTTP request and update UI
     private void executeHttpRequestWithRetrofit(){
         this.updateUIWhenStartingHTTPRequest();
-        GithubCalls.fetchUserFollowing(this, "topstories","c69e095eadba4c708c5d4ffeb0699a41");
+        GithubCalls.fetchUserFollowing(this, "topstories");
     }
 
     // 2 - Override callback methods
