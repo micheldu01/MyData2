@@ -14,7 +14,7 @@ import retrofit2.http.Query;
  */
 
 public interface GithubService {
-    @GET("svc/{username}/v2/home.json?api-key={api_key}")
+    @GET("svc/{username}/v2/home.json?api-key={apikey}")
     Call<List<GithubUser>> getFollowing(@Path("username") String username, @Query("api-key")String apikey);
 
 
